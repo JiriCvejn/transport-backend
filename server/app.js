@@ -15,6 +15,7 @@ sequelize.sync().then(() => console.log('Databáze připravena'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/tasks', require('./routes/tasks'));
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server běží na portu ${process.env.PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server běží...");
 });
+
